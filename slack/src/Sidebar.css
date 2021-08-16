@@ -2,6 +2,7 @@
     /* color: green; */
     background-color: var(--slack-color);
     border: 1px solid #49274b;
+    flex: 0.3;
     max-width: 260px;
     color: white;
 }
