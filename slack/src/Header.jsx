@@ -15,7 +15,7 @@ const Header = () => {
                 src=""
                 />
                 {/* avtars for loggin user  */}
-                <AccessTimeIcon />
+                <AccessTimeIcon className="MuiSvhIcon-root"/>
                 {/* time icon */}
             </div>
             <div className="header__serch">
@@ -26,7 +26,7 @@ const Header = () => {
             </div>
             <div className="header__right">
                 {/* help icon */}
-                <HelpOutlineIcon />
+                <HelpOutlineIcon className="MuiSvhIcon-root" />
             </div>
         </div>
     )
