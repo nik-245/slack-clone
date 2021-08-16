@@ -14,6 +14,8 @@ const Sidebar = () => {
           </h3>
         </div>
         <CreateIcon className="MuiSvgIcon-root" />
+        
+       <SidebarOption Icon={} title="" />
       </div>
     </div>
   );
