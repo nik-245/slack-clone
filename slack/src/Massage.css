@@ -1,0 +1,22 @@
+.massage{
+    padding: 20px;
+   display: flex;
+   align-items: center;
+}
+
+.massage > img {
+    height:50px;
+    width: 50px;
+    object-fit: contain;
+}
+
+.massage__info{
+    padding-left: 10px;
+}
+
+.massage__timestamp{
+    color: gray;
+    font-weight: 300;
+    font-size: 13px;
+    margin-left:10px ;
+}

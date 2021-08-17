@@ -14,9 +14,11 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
 import db from "./firebase";
+import {useStateValue} from "./StateProvider"
 
 const Sidebar = () => {
      const [channels , setChannels]  = useState([]);
+     const [{user}] = useStateValue();
 
      useEffect(() => {
      //run this code ones when the sidebar component loaded
@@ -36,7 +38,7 @@ const Sidebar = () => {
           <h2>channale name</h2>
           <h3>
             <FiberManualRecordIcon className="MuiSvgIcon-root" />
-            nikunj ladva
+            {user?.displayName}
           </h3>
         </div>
         <CreateIcon className="MuiSvgIcon-root" />
@@ -53,7 +55,7 @@ const Sidebar = () => {
        <hr />
        <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
        <hr />
-       <SidebarOption Icon={AddIcon} title="Add channels" />
+       <SidebarOption Icon={AddIcon} addChannleOption title="Add channels" />
        
        {/* connect with db and list all the channales */}
        {/* sidebaroption used recursivly for add dynemicly */}

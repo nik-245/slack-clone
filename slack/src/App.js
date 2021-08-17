@@ -4,11 +4,19 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 import { BrowserRouter as Router , Switch , Route} from "react-router-dom";
 import Chat from "./Chat";
+import Login from "./Login";
+import {useStateValue} from "./StateProvider"
 
 function App() {
+  // const [user , setuser] = useState(null);
+  const [{user} , dispatch] = useStateValue()
   return (
     <div className="App">
       <Router>
+        {!user ? (
+          <Login />
+        ):(
+<>
         {/* <h1>slack clone first move 🚀</h1> */}
         {/* Header component */}
         <Header />
@@ -25,6 +33,8 @@ function App() {
             </Route>
           </Switch>
         </div>
+        </>
+        )}
       </Router>
     </div>
   );
